@@ -9,7 +9,6 @@ Usage:
     
 The solution to the arc challenge:
 
-```ruby
     page '/' do
       form do
         msg = input()
@@ -18,13 +17,11 @@ The solution to the arc challenge:
         end
       end
     end
-```
 
 As you can see you can use normal lexically scoped variables for inputs. This is an improvement over Arc which does not provide an abstraction over form input, you have to use string keys into request parameters to get form input.
 
 A counter with links to increase and decrease the count:
 
-```ruby
     def counter(i)
       puts "the counter is #{i}"
       link("increase") { counter(i+1) }
@@ -34,11 +31,9 @@ A counter with links to increase and decrease the count:
     page '/' do
       counter(0)
     end
-```
 
 A todolist application looks like this:
 
-```ruby
     $todo = []
 
     def todo
@@ -57,6 +52,5 @@ A todolist application looks like this:
     page '/' do
       todo
     end
-```
 
 This displays a list of todo items with delete links, and a form to add an item.
